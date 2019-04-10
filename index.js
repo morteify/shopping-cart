@@ -7,8 +7,6 @@ app.use(cors());
 
 const apiRoutes = require('./api-routes');
 
-app.use(express.static(path.join(__dirname, 'client/build')));
-
 app.use(
 	bodyParser.urlencoded({
 		extended: true,
@@ -26,6 +24,7 @@ mongoose.connect(dbURI, { useNewUrlParser: true }, err => {
 	}
 });
 let db = mongoose.connection;
+app.use(express.static(path.join(__dirname, 'client/build')));
 
 let port = process.env.PORT || 5000;
 app.get('/', (req, res) => {
