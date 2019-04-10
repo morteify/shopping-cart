@@ -7,6 +7,8 @@ app.use(cors());
 
 const apiRoutes = require('./api-routes');
 
+app.use(express.static(path.join(__dirname, 'client/build')));
+
 app.use(
 	bodyParser.urlencoded({
 		extended: true,
