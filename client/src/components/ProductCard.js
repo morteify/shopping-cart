@@ -38,13 +38,16 @@ class ProductCard extends Component {
 		return (
 			<div>
 				<Card>
-					<CardImg
-						top
-						width="100%"
-						src={photo}
-						alt="Card image cap"
-						style={{ maxWidth: '348px', maxHeight: '261px' }}
-					/>
+					<div>
+
+						<CardImg
+							top
+							width="100%"
+							src={photo}
+							alt="Card image cap"
+							style={{ maxWidth: '348px', maxHeight: '261px' }}
+						/>
+					</div>
 					<CardBody>
 						<CardTitle>{name}</CardTitle>
 

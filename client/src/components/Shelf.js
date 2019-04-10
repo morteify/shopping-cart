@@ -7,7 +7,7 @@ import SortingBar from './SortingBar';
 import Filters from './Filters';
 import './shelf.css';
 
-const url = 'http://localhost:8080/api/products';
+const url = 'http://localhost:5000/api/products';
 
 class Shelf extends Component {
 	state = {
@@ -85,7 +85,7 @@ class Shelf extends Component {
 		return (
 			<div
 				id="shelfContainer"
-				style={{ marginTop: '2em', marginBottom: '2em' }}
+				style={{ marginTop: '2em', marginBottom: '2em', marginLeft: '15em', marginRight: '15em' }}
 			>
 				<SortingBar />
 				<div id="shelf">
@@ -103,7 +103,8 @@ class Shelf extends Component {
 												key={index}
 												sm="6"
 												md="6"
-												lg="4"
+												lg="6"
+												xl="4"
 												style={{ padding: '1em' }}
 											>
 												<ProductCard data={item} />

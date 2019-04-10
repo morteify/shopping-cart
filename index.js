@@ -15,8 +15,9 @@ app.use(
 );
 app.use(bodyParser.json());
 
+//process.env.MONGOLAB_URI 
 const dbURI =
-	process.env.MONGOLAB_URI;
+	'mongodb://mweglarz:jadlbymkapuste88@ds125125.mlab.com:25125/shopping-cart';
 mongoose.connect(dbURI, { useNewUrlParser: true }, err => {
 	if (err) {
 		console.log('Some problem with the connection ' + err);
