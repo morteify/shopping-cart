@@ -25,20 +25,6 @@ class Shelf extends Component {
 			this.state.loadedItemsOutput &&
 			prevState.loadedItemsOutput === this.state.loadedItemsOutput
 		) {
-			console.log('before', this.state.loadedItemsOutput);
-			if (this.props.filterMethod) {
-				updatedLoadedItemsOutput = this.state.loadedItemsOutput.filter(item =>
-					Object.keys(this.props.filterMethod).map(criteria =>
-						Object.values(this.props.filterMethod[criteria]).map(
-							filteredName => {
-								console.log(filteredName, item[criteria]);
-								return filteredName === item[criteria];
-							}
-						)
-					)
-				);
-			}
-
 			if (this.props.searchText) {
 				this.setState({
 					loadedItemsOutput: this.props.loadedItems.filter(object => {
@@ -103,9 +89,7 @@ class Shelf extends Component {
 			>
 				<SortingBar />
 				<div id="shelf">
-					<div class="filters">
-						<Filters />
-					</div>
+
 					<div class="products">
 						<Row>
 							{this.state.loadedItemsOutput &&
