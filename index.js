@@ -25,7 +25,7 @@ mongoose.connect(dbURI, { useNewUrlParser: true }, err => {
 });
 let db = mongoose.connection;
 
-let port = process.env.PORT || 8080;
+let port = process.env.PORT || 5000;
 app.get('/', (req, res) => {
 	res.send('This is the entry point for backend of shopping cart');
 });
