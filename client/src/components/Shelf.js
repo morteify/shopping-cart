@@ -7,7 +7,7 @@ import SortingBar from './SortingBar';
 import Filters from './Filters';
 import './shelf.css';
 
-const url = 'http://localhost:5000/api/products';
+const url = 'https://quiet-castle-73690.herokuapp.com/api/products';
 
 class Shelf extends Component {
 	state = {
@@ -91,7 +91,7 @@ class Shelf extends Component {
 		return (
 			<div
 				id="shelfContainer"
-				style={{ marginTop: '2em', marginBottom: '2em', marginLeft: '15em', marginRight: '15em' }}
+				style={{ marginTop: '2em', marginBottom: '2em', marginLeft: '12vw', marginRight: '12vw' }}
 			>
 				<SortingBar />
 				<div id="shelf">
