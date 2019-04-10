@@ -40,7 +40,13 @@ class Shelf extends Component {
 	}
 
 	fetchData = async () => {
-		let response = await fetch(url);
+		let response = await fetch(url, {
+			method: "POST",
+			headers: {
+				"Access-Control-Allow-Origin": "*",
+				"Content-Type": "text/plain"
+			}
+		});
 		let result = await response.json();
 		this.props.updateLoadedItems(result.data);
 	};
