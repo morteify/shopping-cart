@@ -1,0 +1,16 @@
+#shelfContainer {
+	margin-right: 7.5em;
+	margin-left: 7.5em;
+}
+
+#shelf {
+	display: flex;
+}
+
+.filters {
+	flex: 1;
+}
+
+.products {
+	flex: 5;
+}

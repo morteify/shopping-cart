@@ -1,0 +1,17 @@
+.cardTextContainer {
+	display: flex;
+	flex-direction: column;
+}
+
+.itemInfo {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 100%;
+	text-align: left;
+}
+
+.fa-cart-plus:hover {
+	cursor: pointer;
+	color: #ffa500;
+}
