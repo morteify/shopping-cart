@@ -7,7 +7,7 @@ import SortingBar from './SortingBar';
 import Filters from './Filters';
 import './shelf.css';
 
-const url = 'https://quiet-castle-73690.herokuapp.com/api/products';
+const url = '/api/products';
 
 class Shelf extends Component {
 	state = {
